@@ -22,6 +22,10 @@ A word of caution
 -----------------
 This code has not been incredibly well maintained over the years. Tread lightly and have fun breaking FontPrep.
 
+Demo
+----
+Watch a demo [here](http://www.youtube.com/watch?feature=player_embedded&v=4nF3GHHOw-E).
+
 Author
 ------
 | ![twitter/brianmgonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70](http://twitter.com/brianmgonzalez "Follow @brianmgonzalez on Twitter") |
