@@ -1,6 +1,6 @@
 <img src='https://rawgithub.com/briangonzalez/fontprep/master/fontprep/server/application/assets/images/logo.svg' height='30'> FontPrep 
 ========
-The missing font generator for Mac OSX.
+The missing font generator for Mac OSX. _[Download here](releases)._
 
 About
 -----
