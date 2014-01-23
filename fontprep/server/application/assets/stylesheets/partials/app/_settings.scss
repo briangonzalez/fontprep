@@ -1,0 +1,64 @@
+body.app{
+  
+  li.settings.drawer{
+
+    .content{
+      padding: 10px;
+
+      form{
+        .setting-row{
+          @include clearfix;
+          padding: 15px 0;
+
+          label{ 
+            .info{ display: inline-block; font-weight: 900; margin-right: 10px; background: rgba($fp-primary-color, 0.2); padding: 0 10px; cursor: pointer; }
+            .info:hover{ background: rgba($fp-primary-color, 0.5); color: $fp-white; }
+            float: left;
+          }
+          input, select{ float: right }
+
+          a.export-path{
+            font-size: 12px;
+            float: right;
+            padding: 0 10px;
+            border: 1px solid $fp-primary-color; 
+            color: $fp-primary-color;
+            font-family: "Courier New";
+            @include border-radius(2px);
+            @include transition(all, 500ms);
+            &:hover{ 
+              color: white;
+              background: $fp-primary-color + 5; 
+            };
+          }
+
+        }
+      }
+
+      a.button.delete{
+        width: 100%;
+        margin: 0;
+        margin-top: $base-space * 2;
+        color: $fp-danger;
+        border: 2px solid $fp-danger;
+        display: inline-block;
+        text-align: center;
+        @include transition(all, 500ms);
+
+        &:hover{ 
+          color: white;
+          background: $fp-danger
+        }
+      }
+
+    }
+  }
+
+  .settings-info-tip{
+    padding: 10px;
+    max-width: 400px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+}

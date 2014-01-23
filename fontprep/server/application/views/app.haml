@@ -1,0 +1,28 @@
+
+.message
+.group-export{ :data => { :tip => 1, :jst => "actions.export-group", :position => "topright", :y => "-3", :nostem => "true" } }
+  %span.icon-export{ :class => 'fp-icon' }
+
+= partial "partials/topbar"
+
+%ul.fonts
+  = partial "partials/settings_drawer"
+  / Fonts to be ajaxed here after page load.
+
+= partial "partials/modal"
+
+.overlay.loading.shown
+  .text
+    %h2="Please wait"
+    %h1="Loading font library"
+
+.overlay.uploader.shown
+  .text
+    %h1="Drop files to convert"
+
+.overlay.license{ :class => FontPrep.licensed? ? "" : "shown" }
+  = partial "partials/license_box"
+
+.loader-wrap
+  - 3.times do |i|
+    .box

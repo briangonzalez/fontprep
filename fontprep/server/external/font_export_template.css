@@ -1,0 +1,11 @@
+@font-face {
+  font-family: '[family]';
+  src: url('[name].eot'); /* IE9 Compat Modes */
+  src: url('[name].eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('[name].woff') format('woff'), /* Modern Browsers */
+       url('[name].ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('[name].svg#[id]') format('svg'); /* Legacy iOS */
+       
+  font-style:   [style];
+  font-weight:  [weight];
+}

@@ -1,0 +1,27 @@
+Open($1);
+
+SetOS2Value("WinAscentIsOffset", 0);
+SetOS2Value("WinAscent", 2180);
+SetOS2Value("WinDescentIsOffset", 0);
+SetOS2Value("WinDescent", 564);
+SetOS2Value("TypoAscentIsOffset", 0);
+SetOS2Value("TypoAscent", 1638);
+SetOS2Value("TypoDescentIsOffset", 0);
+SetOS2Value("TypoDescent", -410);
+SetOS2Value("HHeadAscentIsOffset", 0);
+SetOS2Value("HHeadAscent", 2180);
+SetOS2Value("HHeadDescentIsOffset", 0);
+SetOS2Value("HHeadDescent", -564);
+
+[unicode_assignments]
+
+Select(0u0000)      # null
+SelectMore(0x000D)  # nonmarkingreturn
+SelectMore(0x0020)  # space
+
+[selections]
+
+SelectInvert();
+Clear();
+
+Generate($2);

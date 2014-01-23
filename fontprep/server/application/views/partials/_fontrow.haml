@@ -1,0 +1,15 @@
+%li{ :class => "font-row", :data => { :name => font.display_name, :rawname => font.rawname, :id => font.id } }
+  .expand
+    .inner
+      .circle
+
+  .name
+    .description="#{font.average_size.round} kb average file size"
+    = font.display_name
+
+  .controls
+    %span{ :class => 'icon-export export fp-icon', :data => { :tip => 1, :title => "Export #{font.display_name} webfont pack", :y => -5, :nostem => '1', :action_export => true, :type => "webfont_pack", :id => font.id } }
+    %span{ :class => 'icon-eye view fp-icon', :data => { :tip => 1, :title => "View #{font.display_name} in browser", :y => -5, :nostem => '1', :id => font.id } }
+    %span{ :class => 'icon-trash delete fp-icon', :data => { :tip => 1, :title => "Move #{font.display_name} to the trash", :y => -5, :nostem => '1', :id => font.id } }
+    %span{ :class => 'icon-install install fp-icon', :data => { :tip => 1, :title => "Install #{font.display_name}", :y => -5, :nostem => '1', :id => font.id } }
+    %span{ :class => 'icon-add export-group fp-icon', :data => { :tip => 1, :title => "Add #{font.display_name} to export group", :fontname => font.display_name, :y => -5, :nostem => '1', :id => font.id } }

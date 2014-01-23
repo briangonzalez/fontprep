@@ -1,0 +1,12 @@
+@include normalize-version('Tables');
+
+// ==========================================================================
+//   Tables
+//   ==========================================================================
+
+// Remove most spacing between table cells.
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

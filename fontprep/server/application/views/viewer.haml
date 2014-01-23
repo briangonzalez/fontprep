@@ -1,0 +1,35 @@
+
+
+- if @font
+  %header
+    = partial "partials/fontselector", :locals => { :current_font => @font }
+
+    .controls
+      %span.font-size
+        %input{ :type => 'range', :min => 6, :max => 300 }
+        .indicator
+          12px
+      %input.text-color{ :type => 'color', :name => 'color' }
+      %input.background-color{ :type => 'color', :name => 'color' }
+
+  %h1
+    = @font.display_name
+
+  %p.text{ :contentEditable => true }
+    - if params[:text]
+      = params[:text]
+    - else
+      - @font.characters.each do |character| 
+        - next if character == "-1"
+        = "&##{character};" 
+
+  :javascript
+    var FP            = FP || {};
+    FP.currentFontID  = "#{@font.id}"
+
+- else
+  %header
+    = partial "partials/fontselector", :locals => { :fonts => @fonts, :current_font => @font }
+
+  %h1
+    No font to display.

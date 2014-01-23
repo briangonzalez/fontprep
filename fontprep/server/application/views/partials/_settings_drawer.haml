@@ -1,0 +1,53 @@
+%li.settings.drawer
+  .inner
+    %h1
+      FontPrep
+      %span.thin
+        Settings
+
+    .content.shown
+      
+      - data      = FP::Database.data
+      - settings  = data[:settings]
+      %form
+        .setting-row
+          %label{ :for => "export-path"}
+            .info{ :data => { :tip => 1, :jst => "settings.info-export-path", :position => "bottomleft", :x => "-9" } }='?'
+            Export fonts to:
+          %a.export-path{ :href => '#', :data => { :tip => 1, :title => 'Click to change export folder', :position => 'leftmiddle', :x => -3 } }
+            = data[:export_path]
+
+        .setting-row  
+          %label{ :for => "webfriendly"}
+            .info{ :data => { :tip => 1, :jst => "settings.info-webfriendly", :position => "bottomleft", :x => "-9" } }='?'
+            Make fonts "web-friendly" upon export?
+          %input{ :type => "checkbox", :id => "webfriendly", :name => "webfriendly", :checked => settings[:webfriendly]}
+
+        .setting-row  
+          %label{ :for => "autohint"}
+            .info{ :data => { :tip => 1, :jst => "settings.info-autohint", :position => "bottomleft", :x => "-9" } }='?'
+            Autohint fonts upon export?
+          %input{ :type => "checkbox", :id => "autohint", :name => "autohint", :checked => settings[:autohint]}
+
+        .setting-row  
+          %label{ :for => "override_blacklist"}
+            .info{ :data => { :tip => 1, :jst => "settings.info-blacklist", :position => "bottomleft", :x => "-9" } }='?'
+            Override blacklist?
+          %input{ :type => "checkbox", :id => "override_blacklist", :name => "override_blacklist", :checked => settings[:override_blacklist] }
+
+        .setting-row  
+          %label{ :for => "use_font_family"}
+            .info{ :data => { :tip => 1, :jst => "settings.info-font-family", :position => "bottomleft", :x => "-9" } }='?'
+            Use actual font family as font-family in generated CSS?
+          %input{ :type => "checkbox", :id => "use_font_family", :name => "use_font_family", :checked => settings[:use_font_family] }
+
+        .setting-row  
+          %label{ :for => "license"}
+            .info{ :data => { :tip => 1, :jst => "settings.license", :position => "bottomleft", :x => "-9" } }='?'
+            - subscription  = FP::Database.data[:subscription]
+            = "Licensed to "
+            %strong= subscription[:email]
+
+      %a.button.delete{ :href => '#' }
+        Delete Entire Library
+

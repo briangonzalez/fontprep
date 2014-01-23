@@ -1,0 +1,11 @@
+a{
+  color: $text-color;
+  text-decoration: none;
+  font-weight: 900;
+  @include transition(border 250ms);
+  
+  &:hover, &:active{
+    border-bottom: 2px solid $text-color;
+  }
+
+}

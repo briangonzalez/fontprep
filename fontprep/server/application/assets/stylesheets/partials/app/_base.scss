@@ -1,0 +1,21 @@
+body.app{
+  overflow-x: hidden;
+  font-size: 16px;
+  background: $fp-primary-color;
+  -webkit-backface-visibility: hidden;
+
+  .group-export{
+    position: fixed; top: -100px; right: 10px;
+    background: $fp-white;
+    z-index: $z-group-export;
+    font-size: 1.2em;
+    padding: 5px 12px;
+    @include border-radius(0 0  2px 2px );
+    @include transition(all 250ms);
+
+    &:hover{ background: white; }
+    &.shown{ top: 0; }
+
+  }
+
+}

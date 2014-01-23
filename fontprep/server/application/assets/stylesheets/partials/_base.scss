@@ -1,0 +1,37 @@
+/* 
+ * THE "BASIS" OF THE SITE'S DESIGN
+ * ========================================================================== */
+
+html, body{ 
+  overflow-x: hidden; 
+}
+
+body {
+  color: $text-color;
+  padding: 0;
+  line-height: $base-line-height;
+  font-size: 30px;
+  
+  font: {
+    family: $base-font;
+    weight: $base-font-weight;
+  }
+
+  @include query-at($break-1){ font-size: 92%; }
+  @include query-at($break-2){ font-size: 94%; }
+  @include query-at($break-3){ font-size: 98%; }
+  @include query-at($break-4){ font-size: 102%; }
+  @include query-at($break-5){ font-size: 108%; }
+  @include query-at($break-6){ font-size: 130%; }
+
+  h1, h2, h3, h4, h5, h6
+    { @include single-transition(all, 0.2s, cubic-bezier(0.215, 0.610, 0.355, 1.000)) }
+  
+  @include border-box-sizing;
+}
+
+.simple-scrollbar{
+  &::-webkit-scrollbar-track  { background: rgba(#333, 0.01) }
+  &::-webkit-scrollbar        { width: 3px; }
+  &::-webkit-scrollbar-thumb  { background: rgba(#333, 0.3) }
+}

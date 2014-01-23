@@ -1,0 +1,24 @@
+body.app{
+
+  .message{
+    position: fixed; bottom: -100px; right: 0; left: 0;
+    background: rgba(black,0.8);
+    z-index: $z-filter + 1;
+    padding: $base-space;
+    text-transform:  uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $fp-white;
+    display: block;
+    opacity: 1;
+    @include transition(all 0.25s ease-in);
+
+    code{ display: inline-block; font-size: 110%; padding: 0 10px; }
+
+    &.shown{ bottom: 0; opacity: 1}
+  }
+
+}

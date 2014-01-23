@@ -1,0 +1,68 @@
+body.view{
+
+  -webkit-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures;
+
+  .container{
+    @include container();
+    padding-top: $grid-padding;
+  }
+
+  header{
+    font-family: $base-font; 
+
+    .controls{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      select { vertical-align: top }
+
+      .font-size{
+        display: inline-block;
+
+        .indicator{ margin-right: 10px; margin-bottom: -10px; 
+                    width: 100px; text-align: center; font-size: 0.75em;
+                    line-height: 0.2; }
+
+        input {  
+          -webkit-appearance: none;
+          height: 5px; width: 90px; 
+          background: rgba($fp-primary-color, 0.4); @include border-radius(3px);
+          @include box-shadow(0); outline: none; border: none; text-align: center;
+          vertical-align: top;
+          margin-top: 10px;
+
+          &::-webkit-slider-thumb {
+              width: 20px;
+              height: 20px;
+              @include transform(scale(1.5))
+          }
+        }
+      }
+    }
+  }
+
+  h1{
+    font-family: $base-font;
+  }
+
+  p.text{
+    @include transition(background 1000ms); margin-top: 0;
+    &:hover { background: rgba($fp-primary-color, 0.2);}
+    span    { display: inline-block; padding: 3px 7px; cursor: pointer;  }
+  } 
+
+  a.icon-ie{
+    position: fixed;
+    bottom: 0px; right: 5px;
+    opacity: 0.5;
+    color: black;
+    cursor: pointer;
+
+    &:hover{ border: none; };
+  } 
+
+}
+
+@import 'spectrum';

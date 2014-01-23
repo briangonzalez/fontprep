@@ -1,0 +1,5 @@
+%select.goto
+  - InstalledFont.all_as_array.each do |font|
+    - selected = (current_font and current_font.id == font.id) ? "selected" : false 
+    %option{ :value => font.id, :selected => selected }
+      = font.display_name

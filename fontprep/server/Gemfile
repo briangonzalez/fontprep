@@ -1,0 +1,28 @@
+# = Gemfile containing requirements for this app =
+#     see http://gembundler.com/ for more on how to use this file
+# source (there are others but whatever)
+source 'https://rubygems.org'
+
+# let's use WEBrick
+# # server
+# gem 'mongrel'
+
+# rack
+gem 'rack', '1.5.2'
+gem 'rake', '10.0.3'
+
+# sinatra
+gem 'sinatra', '1.3.4'
+gem 'json', '1.8.0'
+
+# sprockets galore
+gem 'sprockets', '2.9.0'
+gem 'sprockets-sass', '0.9.1'
+gem 'sprockets-helpers', '0.8.0'
+
+# html/css/js
+gem 'compass', '0.12.2'
+gem 'compass-normalize', '1.4.2'
+gem 'haml', '4.0.0'
+gem 'susy', '1.0.5'
+gem 'uglifier', '1.3.0'

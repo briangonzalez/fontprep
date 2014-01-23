@@ -1,0 +1,9 @@
+.top-bar
+  .inner
+    %input.filter{ :type => 'text', :value => '---', :data => { :placeholder => '---' } }
+
+.top-bar.fixed
+  .inner
+    %span.settings-toggle.fp-icon.icon-menu
+    - placeholder = "type to sort"
+    %input.filter{ :type => 'text', :value => placeholder, :data => { :placeholder => placeholder } }

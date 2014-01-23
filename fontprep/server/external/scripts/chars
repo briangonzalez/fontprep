@@ -1,0 +1,7 @@
+Open($1)
+Reencode("unicode")
+Reencode("compacted")
+SelectAll()
+foreach
+  Print( GlyphInfo("Unicode") )
+endloop

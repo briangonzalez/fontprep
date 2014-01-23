@@ -1,0 +1,44 @@
+.pane.select
+  %header
+    1. Add Range
+  %ul
+    %li.custom-range.add{ :data => { :tip => 1, :title => "Click to add custom range to subset", :position => 'rightmiddle', :x => "-20" } }
+      +
+      %input.start{ :placeholder => '0x000' }
+      %span.sep="-"
+      %input.end{ :placeholder => '0x005' }
+
+    - UNICODE_RANGES.each do |data|
+      - name   = data[0]
+      - ranges = data[1] 
+      %li.add{ :data => { :hex_range => ranges[0], :dec_range => ranges[1], :tip => 1, :title => "Click to add \"#{name}\" to subset; adds #{ranges.first}", :position => 'rightmiddle', :x => "-20" } }
+        = "+ #{name}"
+
+.pane.character-codes
+  %header
+    %span.tip.info{ :data => { :tip => 1, :jst => 'subsetter.info-codes' } }
+      ?
+    %span.tip.clear{ :data => { :tip => 1, :title => 'Clear all' } }
+      X
+    2. Refine Codes
+  %textarea.codes{ :placeholder => 'Click to add subset range to the left or manually enter comma separated list of hex codes' }
+
+.pane.preview
+  %header
+    3. Preview Subset
+  .preview-characters{ :style => "font-family: #{font.id}" }
+    Nothing to preview
+  .exit-subsetter
+    close
+
+.pane.export-actions
+  .total-characters
+    Total Characters:
+    %span.total
+      0
+  .estimated-file-size
+    Estimated file size:
+    %span.size
+      0 kb
+  %a.button.export-subset{ :href => '#' }
+    4. Export this subset

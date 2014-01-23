@@ -1,0 +1,12 @@
+
+{%
+  var chars;
+  $.ajax({ url: FP.Routes.characterCodes, data: { id: id, data: data }, async: false, success: function(data){ chars = data } });
+%}
+
+<ul class='actions copy'>
+  <li class='action title'>Copy</li>
+  <li class='action {{{id}}}' data-id="{{{id}}}" data-action-copy='1' data-raw=1>&#{{{ chars.num }}};</li>
+  <li class='action {{{id}}}' data-id="{{{id}}}" data-action-copy='1' data-char="{{chars.hex}}"><pre><code>{{{ chars.hex }}}</code></pre></li>
+  <li class='action {{{id}}}' data-id="{{{id}}}" data-action-copy='1' data-char="{{chars.dec}}"><pre><code>{{{ chars.dec }}}</code></pre></li>
+</ul>

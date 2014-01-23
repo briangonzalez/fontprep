@@ -1,0 +1,9 @@
+
+:javascript
+  var FP    = FP || {};
+  FP.licensed  = #{FontPrep.licensed?}
+
+- if @font 
+  %script{ :src => javascript_path('viewer')}
+- else
+  %script{ :src => javascript_path('app')}

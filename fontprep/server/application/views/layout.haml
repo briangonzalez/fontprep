@@ -1,0 +1,11 @@
+!!!
+
+%head
+  = partial "partials/head"
+
+%body{ :class => space_delimited_path }
+
+  .container{ :role => "main" }
+    = yield
+
+  = partial "partials/footer_js"

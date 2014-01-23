@@ -1,0 +1,18 @@
+@include normalize-version('Links');
+
+// ==========================================================================
+// Links
+// ==========================================================================
+
+// Addresses `outline` inconsistency between Chrome and other browsers.
+
+a:focus {
+    outline: thin dotted;
+}
+
+// Improves readability when focused and also mouse hovered in all browsers.
+
+a:active,
+a:hover {
+    outline: 0;
+}

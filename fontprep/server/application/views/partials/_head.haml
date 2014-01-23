@@ -1,0 +1,9 @@
+%meta{:charset => "utf-8"}
+%link{:href => image_path('favicon.ico'), :rel => "shortcut icon"}
+%title= "FontPrep"
+
+%link{:href => stylesheet_path('style'), :media => "all", :rel => "stylesheet"}
+
+// Are we in the viewer.
+- if @font and @font.id
+  %link{ :href => "/font/css?id=#{@font.id}&raw=1", :rel => 'stylesheet', :type => 'text/css'}

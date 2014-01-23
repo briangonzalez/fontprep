@@ -1,0 +1,120 @@
+@include normalize-version('Typography');
+
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+// Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+// Safari 5, and Chrome.
+
+h1 {
+    font-size: 2em;
+}
+
+// Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+// Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+
+b,
+strong {
+    font-weight: bold;
+}
+
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+blockquote {
+    margin: 1em 40px;
+}
+}
+
+// Addresses styling not present in Safari 5 and Chrome.
+
+dfn {
+    font-style: italic;
+}
+
+// Addresses styling not present in IE 8/9.
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+// Addresses margins set differently in IE 6/7.
+
+p,
+pre {
+    margin: 1em 0;
+}
+}
+
+// Corrects font family set oddly in Safari 5 and Chrome.
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+     @if $legacy-support-for-ie6 {
+        _font-family: 'courier new', monospace;
+     }
+    font-size: 1em;
+}
+
+// Improves readability of pre-formatted text in all browsers.
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+// Sets consistent quote types.
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+
+// 1. Addresses CSS quotes not supported in IE6/7
+// 2. Addresses quote property not supported in S4
+
+q {
+  quotes: none; // 1
+}
+
+q:before,
+q:after {
+  content: ''; // 2
+  content: none; // 2
+}
+}
+
+// Addresses inconsistent and variable font size in all browsers.
+
+small {
+    font-size: 80%;
+}
+
+// Prevents `sub` and `sup` affecting `line-height` in all browsers.
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}

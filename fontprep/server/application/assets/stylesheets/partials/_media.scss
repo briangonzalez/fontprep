@@ -1,0 +1,11 @@
+
+$break-1:     320px;
+$break-2:     600px;
+$break-3:     768px;
+$break-4:     992px;
+$break-5:     1382px;
+$break-6:     1700px;
+
+@mixin query-at($breakpoint) {
+  @media (min-width: $breakpoint) { @content; }
+}

@@ -1,0 +1,17 @@
+// Compass' Legacy Support for Mozilla, defaulted.
+$legacy-support-for-mozilla: true !default;
+
+// Normalize Version Comment
+@import 'normalize-version';
+@include normalize-version;
+
+// Normalize Partial Imports
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+@import 'normalize/typography';
+@import 'normalize/lists';
+@import 'normalize/embeds';
+@import 'normalize/figures';
+@import 'normalize/forms';
+@import 'normalize/tables';

@@ -1,0 +1,24 @@
+%li.drawer{ :data => { :id => font.id, :fontname => font.fontname } }
+  .inner
+    .controls
+      %span.icon-export{ :class => 'fp-icon', :data => {:tip => 1, :jst => "actions.export", :position => "bottomright", :x => "9", :y => "-5", } }
+      %span.icon-pencil{ :class => 'fp-icon', :data => { :tip => 1, :title => "Create subset of #{font.display_name}", :position => "topright", :x => "14", :y => "-5", :action_subset => true, :id => font.id } }
+      %span.icon-eye{ :class => 'fp-icon', :data => { :tip => 1, :title => "View #{font.display_name} in browser", :position => "topright", :x => "14", :y => "-5", :action_view => true, :id => font.id } }
+      %span.icon-trash{ :class => 'fp-icon', :data => { :tip => 1, :title => "Move #{font.display_name} to the trash", :position => "topright", :x => "14", :y => "-5",  :action_edit => 'delete', :id => font.id } }
+      %span.icon-install{ :class => 'fp-icon', :data => { :title => "Install #{font.display_name} systemwide", :position => "topright", :x => "14", :y => "-5", :action_install => 1, :id => font.id }, "data-tip" => 1 }
+
+    .viewer.shown
+      %h1
+        = font.display_name
+        %span.thin
+          = "#{font.character_count} glyphs"
+      .characters
+        / Characters to be ajaxed in here.
+
+    .subsetter
+      %h1
+        Subset
+        %span.thin
+          = font.display_name
+      .container
+        = partial "partials/subsetter", :locals => { :font => font }

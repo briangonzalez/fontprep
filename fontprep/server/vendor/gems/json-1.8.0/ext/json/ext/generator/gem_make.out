@@ -1,0 +1,167 @@
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/bin/ruby extconf.rb 
+creating Makefile
+
+make
+/usr/local/bin/gcc-4.2 -I. -I/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/x86_64-darwin12.3.0 -I/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/backward -I/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1 -I. -DJSON_GENERATOR -I/Users/brian/.rvm/usr/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wshorten-64-to-32 -Wno-long-long  -pipe -O3 -Wall -O0 -ggdb  -o generator.o -c generator.c
+In file included from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h:32,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:50:21: error: stdlib.h: No such file or directory
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:54:21: error: string.h: No such file or directory
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:64:21: error: stdint.h: No such file or directory
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:67:23: error: inttypes.h: No such file or directory
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:72:19: error: stdio.h: No such file or directory
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:77:20: error: alloca.h: No such file or directory
+In file included from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:176,
+                 from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h:32,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+/usr/local/Cellar/apple-gcc42/4.2.1-5666.3/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include/limits.h:10:25: error: limits.h: No such file or directory
+In file included from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:1342,
+                 from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h:32,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/missing.h:22:24: error: sys/time.h: No such file or directory
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/missing.h:31:25: error: sys/types.h: No such file or directory
+In file included from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:29,
+                 from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:1343,
+                 from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h:32,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/st.h:122: error: expected declaration specifiers or ‘...’ before ‘uint32_t’
+In file included from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/ruby.h:1343,
+                 from /Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby.h:32,
+                 from ../fbuffer/fbuffer.h:5,
+                 from generator.c:1:
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:250: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘rb_fdset_t’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:340: error: expected declaration specifiers or ‘...’ before ‘fd_set’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:340: error: expected declaration specifiers or ‘...’ before ‘fd_set’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:340: error: expected declaration specifiers or ‘...’ before ‘fd_set’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:340: warning: ‘struct timeval’ declared inside parameter list
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:340: warning: its scope is only this definition or declaration, which is probably not what you want
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:341: error: expected declaration specifiers or ‘...’ before ‘rb_fdset_t’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:341: error: expected declaration specifiers or ‘...’ before ‘rb_fdset_t’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:341: error: expected declaration specifiers or ‘...’ before ‘rb_fdset_t’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:341: warning: ‘struct timeval’ declared inside parameter list
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:342: warning: ‘struct timeval’ declared inside parameter list
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:509: error: expected declaration specifiers or ‘...’ before ‘pid_t’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:527: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘rb_fork’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:528: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘rb_fork_err’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:530: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘rb_waitpid’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:531: error: expected ‘)’ before ‘pid’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:532: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘rb_spawn’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:533: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘rb_spawn_err’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:535: error: expected ‘)’ before ‘pid’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:651: error: expected declaration specifiers or ‘...’ before ‘uint32_t’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:775: error: expected ‘)’ before ‘long’
+/Users/brian/.rvm/rubies/ruby-1.9.2-p320/include/ruby-1.9.1/ruby/intern.h:776: error: expected ‘)’ before ‘long’
+In file included from generator.c:1:
+../fbuffer/fbuffer.h: In function ‘fbuffer_alloc’:
+../fbuffer/fbuffer.h:72: warning: implicit declaration of function ‘memset’
+../fbuffer/fbuffer.h:72: warning: incompatible implicit declaration of built-in function ‘memset’
+../fbuffer/fbuffer.h: In function ‘fbuffer_append’:
+../fbuffer/fbuffer.h:109: warning: implicit declaration of function ‘memcpy’
+../fbuffer/fbuffer.h:109: warning: incompatible implicit declaration of built-in function ‘memcpy’
+In file included from generator.c:2:
+generator.h:5:18: error: math.h: No such file or directory
+generator.h:6:19: error: ctype.h: No such file or directory
+generator.c: In function ‘fstrndup’:
+generator.c:304: warning: implicit declaration of function ‘memccpy’
+generator.c: At top level:
+generator.c:380: warning: unused parameter ‘self’
+generator.c: In function ‘mString_to_json_raw_object’:
+generator.c:410: warning: implicit declaration of function ‘strlen’
+generator.c:410: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:411: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘mString_Extend_json_create’:
+generator.c:438: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:439: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: At top level:
+generator.c:434: warning: unused parameter ‘self’
+generator.c: In function ‘State_allocate’:
+generator.c:505: warning: incompatible implicit declaration of built-in function ‘memset’
+generator.c: In function ‘set_state_ivars’:
+generator.c:611: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘cState_aref’:
+generator.c:657: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘cState_aset’:
+generator.c:671: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:675: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: At top level:
+generator.c:767: warning: unused parameter ‘Vstate’
+generator.c:781: warning: unused parameter ‘Vstate’
+generator.c:781: warning: unused parameter ‘state’
+generator.c:781: warning: unused parameter ‘obj’
+generator.c:786: warning: unused parameter ‘Vstate’
+generator.c:786: warning: unused parameter ‘state’
+generator.c:786: warning: unused parameter ‘obj’
+generator.c:791: warning: unused parameter ‘Vstate’
+generator.c:791: warning: unused parameter ‘state’
+generator.c:791: warning: unused parameter ‘obj’
+generator.c:796: warning: unused parameter ‘Vstate’
+generator.c:796: warning: unused parameter ‘state’
+generator.c:801: warning: unused parameter ‘Vstate’
+generator.c:801: warning: unused parameter ‘state’
+generator.c: In function ‘generate_json_float’:
+generator.c:813: warning: implicit declaration of function ‘isinf’
+generator.c:816: warning: implicit declaration of function ‘isnan’
+generator.c: At top level:
+generator.c:807: warning: unused parameter ‘Vstate’
+generator.c: In function ‘isArrayOrObject’:
+generator.c:905: warning: implicit declaration of function ‘isspace’
+generator.c: In function ‘cState_init_copy’:
+generator.c:972: warning: incompatible implicit declaration of built-in function ‘memcpy’
+generator.c: In function ‘cState_indent’:
+generator.c:1013: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘cState_indent_set’:
+generator.c:1035: warning: implicit declaration of function ‘strdup’
+generator.c:1035: warning: incompatible implicit declaration of built-in function ‘strdup’
+generator.c: In function ‘cState_space’:
+generator.c:1050: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘cState_space_set’:
+generator.c:1073: warning: incompatible implicit declaration of built-in function ‘strdup’
+generator.c: In function ‘cState_space_before’:
+generator.c:1087: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘cState_space_before_set’:
+generator.c:1109: warning: incompatible implicit declaration of built-in function ‘strdup’
+generator.c: In function ‘cState_object_nl’:
+generator.c:1124: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘cState_object_nl_set’:
+generator.c:1146: warning: incompatible implicit declaration of built-in function ‘strdup’
+generator.c: In function ‘cState_array_nl’:
+generator.c:1160: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c: In function ‘cState_array_nl_set’:
+generator.c:1181: warning: incompatible implicit declaration of built-in function ‘strdup’
+generator.c: In function ‘Init_generator’:
+generator.c:1402: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1403: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1404: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1405: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1406: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1407: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1408: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1409: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1410: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1411: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1412: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1413: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1414: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1415: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1416: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1417: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1418: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1419: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1420: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1421: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1422: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1423: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1424: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1425: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1426: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1427: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1429: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1429: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1430: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1431: warning: incompatible implicit declaration of built-in function ‘strlen’
+generator.c:1433: warning: incompatible implicit declaration of built-in function ‘strlen’
+make: *** [generator.o] Error 1

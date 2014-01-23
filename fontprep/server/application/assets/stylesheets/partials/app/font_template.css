@@ -1,0 +1,12 @@
+@font-face {
+  font-family: '[id]';
+  src: url('/font/file?id=[id]&type=eot'); /* IE9 Compat Modes */
+  src: url('/font/file?id=[id]&type=eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/font/file?id=[id]&type=woff') format('woff'), /* Modern Browsers */
+       url('/font/file?id=[id]&type=ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/font/file?id=[id]&type=svg#svg') format('svg'); /* Legacy iOS */
+}
+
+.[id]{
+  font-family: '[id]';
+}

@@ -1,0 +1,57 @@
+/*
+*     @font-face logic
+*     http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
+*/
+
+@font-face {
+  font-family: 'prepicons';
+  src: font-url("prepicons.eot")            format('embedded-opentype'), 
+       font-url("prepicons.woff")           format('woff'), 
+       font-url("prepicons.ttf")            format('truetype'),
+       font-url("prepicons.svg#gsfqetukng") format('svg');
+}
+
+/*  Font Awesome
+    the iconic font designed for use with Twitter Bootstrap
+    -------------------------------------------------------
+    The full suite of pictographic icons, examples, and documentation
+    can be found at: http://fortawesome.github.com/Font-Awesome/
+
+    License
+    -------------------------------------------------------
+    The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+    http://creativecommons.org/licenses/by/3.0/ A mention of
+    'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+    source code is considered acceptable attribution (most common on the web).
+    If human readable source code is not available to the end user, a mention in
+    an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+    or mobile software).
+
+    Contact
+    -------------------------------------------------------
+    Email: dave@davegandy.com
+    Twitter: http://twitter.com/fortaweso_me
+    Work: http://lemonwi.se co-founder
+
+    */
+
+/*  Font Awesome styles
+    ------------------------------------------------------- */
+.fp-icon:before {
+  font-family: prepicons;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.fp-icon.icon-pencil:before       { content: '\e700'; }
+.fp-icon.icon-trash:before        { content: '\e701'; }
+.fp-icon.icon-menu:before         { content: '\e702'; }
+.fp-icon.icon-arrows-cw:before    { content: '\e703'; }
+.fp-icon.icon-eye:before          { content: '\e704'; }
+.fp-icon.icon-export:before       { content: '\e705'; }
+.fp-icon.icon-add:before          { content: '\e706'; }
+.fp-icon.icon-minus:before        { content: '\e707'; }
+.fp-icon.icon-install:before      { content: '\e708'; }
+.fp-icon.icon-ie:before           { content: '\e709'; }

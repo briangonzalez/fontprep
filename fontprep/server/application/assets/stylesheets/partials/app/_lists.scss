@@ -1,0 +1,44 @@
+body.app{
+
+  ul.actions{
+    margin: 0; padding: 0;
+    color: $text-color;
+    min-width: 200px;
+    overflow-y: auto;
+
+    &.copy{
+      text-align: center;
+      min-width: 125px;
+      width: 125px;
+      
+      [data-raw]{font-size: 20px}
+      pre{ display: inline-block; padding: 0; margin: 0; }
+    }
+
+    li{
+      margin: 0; padding: 10px $base-space*3;  
+      cursor: pointer;
+      @include transform(translate3d(0,0,0));
+
+      &.title, &.title:hover    { background: $fp-primary-color-dark; color: white; }
+      &.font                    { background: $fp-white - 20; }
+
+      &:first-child{ @include border-radius(5px 5px 0 0 ) };
+      &:last-child{ @include border-radius(0 0 5px 5px ) };
+
+    }
+
+    .action{
+      &:hover{ 
+        background: $fp-white - 5;
+      }
+
+      &.danger{
+        background: rgba($fp-danger,0.9);
+        color: $fp-white;
+      }
+    }
+
+  }
+
+}

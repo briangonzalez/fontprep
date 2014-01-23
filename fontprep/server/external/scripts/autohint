@@ -1,0 +1,21 @@
+
+Open($1)
+
+# Glyph cleanup
+  SelectAll()
+
+# Hinting
+  AutoHint()
+  PrivateGuess("BlueScale")
+  PrivateGuess("BlueValues")
+  PrivateGuess("OtherBlues")
+  PrivateGuess("StdHW")
+  PrivateGuess("StdVW")
+  PrivateGuess("StemSnapH")
+  PrivateGuess("StemSnapV")
+  AutoHint()
+  AutoInstr()
+
+
+# Save.
+Generate($2)

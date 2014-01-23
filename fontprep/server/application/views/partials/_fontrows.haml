@@ -1,0 +1,4 @@
+- all.each do |font|
+  - next if font.characters.empty?
+  = partial "partials/fontrow", :locals => { :font => font }
+  = partial "partials/fontdrawer", :locals => { :font => font }

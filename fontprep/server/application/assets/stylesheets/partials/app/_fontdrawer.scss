@@ -1,0 +1,65 @@
+body.app{
+
+  ul.fonts{
+
+    li.drawer{
+      max-height: 0px;
+      background: white;
+      overflow: hidden;
+      position: relative;
+      @include transition(all 750ms ease);
+
+      .inner{
+        position: relative;
+        margin: $base-space * 4;
+        @include clearfix;
+
+        h1        { font-weight: 900; max-width: 55%; @include ellipsis; 
+                    padding-bottom: 10px; margin-top: 0 }
+        h1 .thin  { font-weight: 200 }
+
+        .controls{
+          position: absolute; top: 0; right: 0;
+          color: $fp-primary-color + 50;
+          font-size: 1em;
+          
+          margin-right: -10px;
+          @include query-at($break-2){ font-size: 1.1em; margin-right: -25px; }
+
+
+          .fp-icon        { 
+            margin-right: 10px; cursor: pointer; 
+            @include query-at($break-2){ margin-right: 25px; }
+          }
+          .fp-icon:hover        { color: $fp-primary-color + 30; }
+          .icon-trash:hover             { color: $fp-danger; }
+        }
+
+        .characters, .content{
+          opacity: 0.1;
+          margin: 0;
+          padding: 0;
+          @include transition(all 100ms ease);
+          &.shown{ opacity: 1; @include transition(all 100ms ease); }
+          
+          .character        { padding: 6px; text-align: center; cursor: pointer; display: inline-block; }
+          .character:hover  { background: rgba($fp-primary-color, 0.1) }
+          .limit            { font-family: $base-font; margin-bottom: $base-space*2; font-weight: 200;
+                              a{ margin-left: 5px; }
+          }
+        }
+
+        .viewer, .subsetter             { display: none }
+        .viewer.shown, .subsetter.shown { display: block }
+
+      }
+    }
+
+    li.font-row.expanded + li.drawer, li.settings.drawer.expanded{
+      max-height: 10000px;
+      @include transition(all 750ms ease);
+    }
+
+  }
+
+}

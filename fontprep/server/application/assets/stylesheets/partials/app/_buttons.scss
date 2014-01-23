@@ -1,0 +1,18 @@
+
+a.button {
+   background: rgba(white, 0.3);
+   color: white;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 400;
+   margin: 5px;
+   padding: 8px 13px 9px 13px;
+   @include border-radius(3px);
+   @include transition(all 200ms ease);
+
+   &:hover{ 
+    text-decoration: none; border: none; 
+    background: rgba(white, 0.4);
+  };
+
+}

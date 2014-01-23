@@ -1,0 +1,20 @@
+FP.Routes = {
+  fontrows:           "/misc/fontrows",
+  license:            "/license",
+  upload:             "/upload",
+  openURL:            "/applescript/open-url",
+  alert:              "/applescript/alert",
+  viewer:             "/view",
+  copyCharacter:      "/applescript/copy-character",
+  characters:         "/misc/drawer-characters",
+  characterCodes:     "/font/codes",
+  remove:             "/font/remove",
+  removeAll:          "/font/remove-all",
+  installFont:        "/font/install",
+  exportFont:         "/font/export",
+  exportGroup:        "/font/export-group",
+  exportSubset:       "/font/export-subset",
+  settingsSet:        "/settings/set",
+  settingsSetPath:    "/settings/set-path",
+  settingsTheme:      "/settings/set-theme"
+}

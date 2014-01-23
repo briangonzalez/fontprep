@@ -1,0 +1,15 @@
+@import "compass/support";
+
+@mixin normalize-version($partial: false) {
+  $version: 'v2.0.1';
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    $version: 'v1.0.1';
+  }
+  
+  @if $partial {
+    /*! normalize.css #{$version} | #{$partial} | MIT License | git.io/normalize */
+  }
+  @else {
+    /*! normalize.css #{$version} | MIT License | git.io/normalize */
+  }
+}

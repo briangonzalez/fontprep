@@ -1,0 +1,47 @@
+@include normalize-version('HTML5 Display Definitions');
+
+// ==========================================================================
+// HTML5 display definitions
+// ==========================================================================
+
+// Corrects `block` display not defined in IE 8/9.
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+// Corrects `inline-block` display not defined in IE 8/9.
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+        *display: inline;
+        *zoom: 1;
+    }
+}
+
+// Prevents modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+// Addresses styling for `hidden` attribute not present in IE 8/9.
+
+[hidden] {
+    display: none;
+}

@@ -1,0 +1,14 @@
+<ul class='actions'>
+  <li class='action'        data-action-export-group-go='true'>Export All</li>
+  <li class='action danger' data-action-export-group-clear='true' >Clear</li>
+
+  {% if ( _.keys(FP.ExportGroup).length > 0 ) { %}
+    <li class='title' data-action-subset='true' >Fonts in group:</li>
+    {% _.each(FP.ExportGroup, function(name, id){ %}
+      <li class='font'>{{name}}</li>
+    {% }) %}
+  {% } else { %}
+    <li class='font'>No fonts added to group</li>
+  {% } %}
+
+</ul>

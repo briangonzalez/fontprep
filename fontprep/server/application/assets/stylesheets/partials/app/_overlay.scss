@@ -1,0 +1,55 @@
+body.app{
+  
+  .overlay{
+    position: fixed; top: 0; right: 0; left: 0; bottom: 0; z-index: 0; 
+    background: $fp-primary-color; opacity: 0; @include transition(all 300ms ease);
+  }
+
+  .overlay.uploader, .overlay.loading{
+    pointer-events: none;
+    z-index: $z-drag-overlay;
+    &.shown{ opacity: 1; h1{ @include transform( scale(1.05) ) } }
+
+    .text     { 
+      position: absolute; top: 30%;
+      width: 100%;
+      color: white;
+      text-align: center;
+
+      h1{ font-weight: 200; text-transform: uppercase; letter-spacing: 4px; font-size: 1.5em; margin: 0;  }
+      h2{ text-transform: uppercase; font-weight: 200; font-size: 1em; letter-spacing: 4px; margin: 0; }
+    }
+  }
+
+  .overlay.loading{
+    z-index: $z-loading-overlay;
+
+    &.shown   { opacity: 1; }
+  }
+
+  .overlay.license{
+    pointer-events: none; opacity: 0;
+    @include transition(0);
+    z-index: $z-license-overlay;
+
+    &.shown{ opacity: 1; pointer-events: auto; }
+
+    form.box{
+      height: 310px; width: 250px;
+      position: absolute; top: 45%; left: 50%;
+      margin-top: -155px; margin-left: -125px; padding: 15px;
+      background: $fp-white; @include border-radius(2px); text-align: center; 
+      @include box-shadow( 1px 6px 20px -2px rgba(0, 0, 0, 0.1) );
+      // border: 5px solid rgba($fp-primary-color + 20, 0.6);
+
+      img         { width: 120px; margin: 10px auto 25px auto; display: block; }
+      input       { width: 100%; padding: 10px; margin-top: 5px; outline: none; 
+                    border: 2px solid rgba($fp-primary-color, 0.5); @include border-radius(2px);
+                    &:hover, &:focus{ border-color: rgba($fp-primary-color, 0.6);; }
+                  }
+      input.error { border-color: #fc645d; }
+      .notice     { font-size: 0.7em; color: $darkgrey + 20; }
+    }
+
+  }
+}

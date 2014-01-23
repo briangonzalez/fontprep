@@ -1,0 +1,157 @@
+body.app{
+  ul.fonts{
+    li.drawer{
+      .subsetter{
+        .container{
+          @include clearfix;
+
+          .pane{
+            height: 600px;
+            background: rgba($fp-primary-color, 0.1);
+            float: left;
+            width: 100%;
+            margin-top: $base-space*2;
+            position: relative;
+            text-align: center;
+            border: 2px solid rgba($fp-primary-color, 0.01);
+            @include border-radius(3px);
+            
+            @include query-at($break-3){
+              width: 30%;  
+              margin-top: 0;
+              &.character-codes{ margin: 0 5%; }
+            }
+
+            header  { text-align: center; font-size: 1.2em; 
+                      font-weight: 700; padding: $base-space 0; 
+                      background: white; 
+                    }
+
+            &.select{
+              text-align: center;
+              overflow: hidden;
+              overflow-y: scroll;
+              @extend .simple-scrollbar;
+
+              ul{ padding: 0; margin: 0; }
+              ul li{
+                padding: $base-space 0;
+                list-style-type: none;
+                border-top: 1px solid $fp-white;
+                position: relative;
+                cursor: pointer;
+
+                &:hover{ background: rgba(white,0.5); color: $text-color - 50; }
+
+                &.custom-range{
+                  input{
+                    display: inline-block; border: 2px solid $fp-white - 20;
+                    width: 100px;
+                    text-align: center;
+                  }
+                  .sep{
+                    margin: 0 10px;
+                  }
+                }
+
+                .add{
+                  position: absolute; right: 0; top: 10px;
+                  font-size: 1.2em;
+                  font-weight: 900; cursor: pointer;
+                  padding: 0 5px;
+                  background: rgba(white, 0.7);
+                  &:hover{ background: white; };
+                }
+              }
+
+            }
+
+            &.character-codes{
+              header{
+
+                .tip{ 
+                  background: rgba($fp-primary-color, 0.1); padding: 0 10px; cursor: pointer;
+                  position: absolute; top: 0px; right: 6px;
+                  font-weight: 700; font-size: 10px;
+                  @include border-radius(0 0 1px 1px);
+                  &:hover{ border: 0 }
+
+                  &.clear        { background: rgba($fp-danger, 0.5); right: 6px; color: white; }
+                  &.clear:hover  { background: rgba($fp-danger, 0.75) }
+                  &.info         { right: 40px; }
+                }
+
+              }
+              .codes{
+                position: absolute;
+                top: 40px; right: 0; bottom: 0; left: 0; 
+                overflow: scroll;
+                overflow-x: hidden;
+                padding: 20px;
+                outline: none; border: 0;
+                background: transparent;
+                resize: none;
+                color: $text-color;
+                letter-spacing: 1px;
+                font-family: 'Courier New';
+                font-size: 0.8em;
+
+                @extend .simple-scrollbar;
+              }
+
+            }
+
+            &.preview{
+              height: 470px;
+
+              .exit-subsetter { 
+                position: absolute; top: -7px; right: 3px;
+                font-size: 0.6em; text-transform: uppercase; letter-spacing: 1px;
+                cursor: pointer;
+              }
+
+              .preview-characters{
+                position: absolute;
+                top: 40px; right: 0; bottom: 0; left: 0; 
+                overflow: scroll;
+                overflow-x: hidden;
+                padding: 20px;
+                color: $text-color;
+                letter-spacing: 1px; 
+
+                @extend .simple-scrollbar;
+              }
+
+            }
+
+            &.export-actions{ 
+              background: transparent;
+              height: 120px; margin-top: 10px;
+              border: 0;
+
+              a.button{
+                border: 1px solid $fp-primary-color; 
+                width: 98%;
+                display: block;
+                padding: 10px;
+                text-align: center;
+                color: $fp-primary-color;
+                @include border-radius(2px);
+
+                &:hover { 
+                  color: white;
+                  background: $fp-primary-color + 3; 
+                };
+              }
+
+              .estimated-file-size, .total-characters{
+                .size, .total { font-weight: 900; }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

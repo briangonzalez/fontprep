@@ -1,0 +1,7 @@
+.sass-cache/
+.DS_Store
+public/assets
+vendor/bundle/
+.bundle
+.rvmrc
+.ruby-version

@@ -1,0 +1,34 @@
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+// ==========================================================================
+// Lists
+// ==========================================================================
+
+// Addresses margins set differently in IE 6/7.
+
+dl,
+menu,
+ol,
+ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+// Addresses paddings set differently in IE 6/7.
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 40px;
+}
+
+// Corrects list images handled incorrectly in IE 7.
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+}

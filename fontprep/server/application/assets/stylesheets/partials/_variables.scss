@@ -1,0 +1,35 @@
+
+
+
+// SUSY ====================================================
+/* see http://susy.oddbird.net/guides/reference/ */
+$total-columns:               12;
+$column-width:                4.0em;
+$gutter-width:                0.5em;
+$grid-padding:                $gutter-width*3;
+$border-box-sizing:           true;
+$breakpoint:                  0em 45em; /* min-max media query breakpoint */
+$from-direction:              left;
+$omega-float:                 $from-direction;
+$base-space:                  $gutter-width;
+
+// COLORS ====================================================
+$fp-white:                    #ECF0F1; 
+$fp-danger:                   #f4644d;  
+
+$bg-color:                    #fff;
+$lightgrey:                   #ddd;
+$super-lightgrey:             #f6f6f6;
+$darkgrey:                    #333;
+
+
+// BUTTONS =======================================================
+$button-border-radius:        2px;
+
+// TYPOGRAPHY ====================================================
+$base-font-size:              1em;        // == 16px
+$base-line-height:            1.875em;    // == 30px
+$base-font-weight:            400;
+$base-font:                   Lato, Lucida, Arial, sans-serif, sans;
+$base-heading-font:           $base-font;
+$base-heading-fontweight:     bold;

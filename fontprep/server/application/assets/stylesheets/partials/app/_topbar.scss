@@ -1,0 +1,50 @@
+body.app{
+
+  .top-bar{
+    width: 100%;
+    background: $fp-primary-color + 5;
+    z-index: $z-filter;
+
+    &.fixed{ position: fixed; top: 0; left: 0; }
+
+    .inner{
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .settings-toggle{
+        position: absolute; top: 4px; left: 9px;
+        color: rgba(white, 0.9);
+        font-size: 1.5em;
+        cursor: pointer;
+        @include transition(all 250ms ease);
+        @include query-at($break-3){ left: 14px; }
+
+        &:hover{ color: white; };
+      }
+
+      input[type='text']{
+        width: 100%;
+        -webkit-appearance: none;
+        border: none;
+        outline: none;
+
+        font-size: 0.9em;
+        font-weight: 400;
+
+        padding: $base-space*2;
+        color: rgba($fp-white, 0.75);
+        background: transparent;
+        text-transform:  uppercase;
+        letter-spacing: 1px;
+        @include single-transition(all, 0.25s);
+
+        text-align: center;
+       
+        &:focus{ color: $fp-white; };
+      }
+    }
+
+  }
+
+}

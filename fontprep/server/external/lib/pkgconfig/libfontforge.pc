@@ -1,0 +1,17 @@
+prefix=/opt/local
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+mandir=/opt/local/share/man
+localedir=${datarootdir}/locale
+
+Name: libfontforge
+Description: a font manipulation library.
+Version: 2.0.0
+Requires: 
+Requires.private:  libpng libxml-2.0 cairo pango zlib
+Libs: -L${exec_prefix}/lib -lfontforge
+Libs.private:  -lgioftp -lgutils -lgunicode -lgif -ljpeg  -lSM -lICE  -L/opt/local/lib   -lltdl -lX11 -Wl,/System/Library/Frameworks/Carbon.framework/Carbon -Wl,/System/Library/Frameworks/CoreServices.framework/CoreServices -lltdl 
+Cflags: -I${includedir}/fontforge

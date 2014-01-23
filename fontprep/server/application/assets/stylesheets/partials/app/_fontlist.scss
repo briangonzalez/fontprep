@@ -1,0 +1,103 @@
+body.app{
+
+  ul.fonts{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;
+            user-select: none;
+
+    li.font-row{
+      background: $fp-primary-color;
+      position: relative;
+      padding-left: $base-space*7;
+      font-weight: 400;
+      overflow: visible;
+      user-select: none;
+      opacity: 0;
+      @include clearfix;
+
+      &:nth-child(4n)   { background: $fp-primary-color + 3; };
+      &:hover           { background: $fp-primary-color + 10; cursor: pointer; }
+      &.hidden          { display: none; }
+      &.shown           { opacity: 1; height: auto; @include single-transition(opacity, 1s)}
+
+      .expand{
+        height: 100%; width: 40px;
+        position: absolute;
+        top: 0; left: 0; bottom: 0;
+        cursor: pointer;
+        @include query-at($break-3) { width: 50px; }
+
+        .inner{
+          position: relative; height: 100%; width: 100%;
+
+          .circle{
+            position: absolute; top: 50%; left: 50%;
+            margin-left: -10px; margin-top: -10px;
+            height: 20px; width: 20px;
+            background: rgba($fp-white, 0.05);
+            vertical-align: middle;
+            display: inline-block;
+            @include border-radius(100px);
+            @include single-transition(all, 0.25s);
+          }
+        }
+      }
+
+      &:hover, &.expanded{
+        .expand                   {  }
+        .expand .inner .circle    { background: rgba($fp-white, 0.4) }
+        .name .description        { color: rgba($fp-white,0.5); } 
+        .name                     { width: 60%; } 
+      };
+
+      .name{
+        color: #fff;
+        font-size: 1em;
+        padding: $base-space;
+        font-weight: 400;
+        @include ellipsis; 
+
+        @include query-at($break-3){ 
+          font-size: 1.1em;
+        }
+
+        .description  { 
+          font-size: 60%; color: rgba(white, 0.3);
+          display: none;
+          @include query-at($break-3){ display: block; }
+        }
+      }    
+
+      .controls{
+        height: 100%;
+        position: absolute;
+        top: 0; right: -200px; bottom: 0;
+        line-height: 2.5;
+        opacity: 0;
+        @include transition(all 100ms ease-in);
+
+        .fp-icon { margin-right: 10px; cursor: pointer; color: rgba($fp-white,0.3); font-size: 1em }
+
+        @include query-at($break-3){ 
+          line-height: 4; 
+          .fp-icon { margin-right: 12px; font-size: 1.2em }
+        }
+      }
+
+
+      &:hover{
+        .controls { right: 10px; opacity: 1; }
+        .controls .fp-icon { color: $fp-white; }
+      }
+
+      &.expanded{
+        .controls { opacity: 1; }
+      }
+
+    }
+
+  }
+
+}

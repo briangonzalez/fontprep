@@ -1,0 +1,13 @@
+- characters = font.characters
+- characters = characters.select{|c| c != '-1'}
+
+- if characters.length > MAX_VIEWABLE_CHARS and !show_all
+  .limit
+    = "Showing #{MAX_VIEWABLE_CHARS} of #{characters.length} glyphs"
+    %a.show-all{ :href => '#', :data => { :tip => 1, :title => "CAUTION: Showing #{characters.length} glyphs is potentially slow!" }}
+      Show all  
+  - characters = characters.take(MAX_VIEWABLE_CHARS)
+
+- characters.each do |character|
+  %span.character{ :data => { :tip => 1, :jst => "actions.copy", :data => character, :x => "-3", :y => "-3", :stem => '1' } }
+    = dec_entity(character)

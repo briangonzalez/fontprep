@@ -1,0 +1,44 @@
+
+RUBY_187_LOCATION = "~/.rvm/rubies/ruby-1.8.7-p371/bin/ruby"
+
+# The default, if you just run `rake` in this directory, will list all the available tasks
+task :default do
+  puts "All available rake tasks"
+  system('rake -T')
+end
+
+desc "Startup FontPrep Server"
+task :start do
+  puts ENV
+  
+  port              = ENV['PORT']         || '7500'
+  ruby_187          = ENV['RUBY_187']     || false
+  force_jruby       = ENV['FORCE_JRUBY']  || false
+  version_string    = ENV['VERSION'] ? "VERSION=#{ENV['VERSION']}" : ""
+
+  puts " ** Starting FontPrep Server on port: #{port}"
+
+  if ruby_187
+    puts " ** Starting FontPrep with Ruby 187"
+    system "#{RUBY_187_LOCATION} ./app.rb #{version_string}"
+  elsif File.exists?('/usr/bin/ruby') or !force_jruby
+    puts " ** Starting FontPrep with system ruby"
+    system "/usr/bin/ruby ./app.rb #{version_string}"
+  else
+    puts " ** Starting FontPrep with jRuby complete"
+    system "/usr/bin/java -jar jruby-complete-1.7.3.jar ./app.rb #{version_string}"
+  end
+
+end
+
+desc "Kill process running on port (default to port 7500)."
+task :kill_others do
+  port = ENV['PORT'] || 7500
+  puts "  ** Killing process on port: #{port}"
+
+  system "/usr/sbin/lsof -P | grep ':#{port}' | awk '{print $2}' | xargs kill -9"
+  system "/usr/sbin/lsof -n -i4TCP:#{port} | grep LISTEN | awk '{print $2}' | xargs kill -9"
+
+  puts "  ** Done."
+end
+

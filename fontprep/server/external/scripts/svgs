@@ -1,0 +1,5 @@
+Open($1); 
+SelectWorthOutputting(); 
+foreach 
+Export( $2 + "/" + GlyphInfo("name") + "." + "svg" ); 
+endloop; 

@@ -1,0 +1,20 @@
+@include normalize-version('Embedded Content');
+
+// ==========================================================================
+// Embedded content
+// ==========================================================================
+
+// Removes border when inside `a` element in IE 8/9.
+
+img {
+    border: 0;
+    @if $legacy-support-for-ie7 {
+        -ms-interpolation-mode: bicubic;
+    }
+}
+
+// Corrects overflow displayed oddly in IE 9.
+
+svg:not(:root) {
+    overflow: hidden;
+}

@@ -1,0 +1,38 @@
+
+  @-webkit-keyframes polse{
+    0%    { opacity: 0; }
+    50%   { opacity: 0.7; @include transform(rotate(360deg)) }
+    100%  { opacity: 0; }
+  }
+
+body{
+  
+  .loader-wrap{
+    height: 12px;
+    position: fixed; 
+    top: 0; right: 5px;
+    z-index: $z-loader;
+    opacity: 0;
+    @include transition(all 200ms ease);
+
+    .box{
+      width: 12px;
+      height: 100%;
+      background: white;
+      display: inline-block;
+      margin-right: 10px;
+      @include border-radius(2px);
+    }
+    
+    &.active{
+        opacity: 1;
+
+        @for $i from 0 through 10{
+          .box:nth-child( #{$i} ){
+          -webkit-animation: polse 1000ms ease infinite #{$i * 50}ms;
+        }
+
+      }
+    } 
+  }
+}
