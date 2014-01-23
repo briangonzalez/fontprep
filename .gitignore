@@ -1,0 +1,12 @@
+
+fontprep/server/public/
+FontPrep.xcodeproj/project.xcworkspace/xcuserdata/
+FontPrep.xcodeproj/xcuserdata/
+
+.sass-cache
+.DS_Store
+server/public/assets
+server/vendor/bundle/
+.bundle
+.rvmrc
+.ruby-version
