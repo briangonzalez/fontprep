@@ -1,5 +1,5 @@
-FontPrep 
---------
+<img src='https://rawgithub.com/briangonzalez/fontprep/master/fontprep/server/application/assets/images/logo.svg' height='30'> FontPrep 
+========
 The missing font generator for Mac OSX.
 
 About
@@ -12,7 +12,7 @@ FontPrep uses a slightly modified version of cocoa-rack (https://github.com/bria
 
 Commands are sent from the webview back down to the Sinatra server as you interact with FontPrep, and commands are piped to stdout (be it FontForge, ttf2eot, etc.) to complete the given taks. We use a little Applescript magic when necessary.
 
-The main Sinatra logic lives inside of `fontprep/server`.
+The main Sinatra logic lives inside of `fontprep/server`. The sinatra server is daemonized, meanings its process will persist across closing and opening of FontPrep. To kill FontPrep's server outright, visit `http://127.0.0.1:7500/kill` in your browser.   
 
 Building FontPrep
 -----------------
