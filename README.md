@@ -16,7 +16,7 @@ The main Sinatra logic lives inside of `fontprep/server`. The sinatra server is 
 
 Building FontPrep
 -----------------
-Simply open up `FontPrep.xcodeproj` with the latest version of XCode, go to `Product -> Clean` then `Product -> Run`.
+Simply open up `FontPrep.xcodeproj` with the latest version of XCode, go to `Product -> Clean` then `Product -> Run` or `Product -> Archive` to create a binary.
 
 Updating FontPrep
 -----------------
