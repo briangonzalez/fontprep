@@ -18,6 +18,10 @@ Building FontPrep
 -----------------
 Simply open up `FontPrep.xcodeproj` with the latest version of XCode, go to `Product -> Clean` then `Product -> Run`.
 
+Updating FontPrep
+-----------------
+Be sure to increment the `Version` and `Bundle` inside XCode to update FontPrep correctly. Incrementing these values is what tells FontPrep to kill stale daemonized server processes. 
+
 A word of caution
 -----------------
 This code has not been incredibly well maintained over the years. Tread lightly and have fun breaking FontPrep.
