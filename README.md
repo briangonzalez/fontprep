@@ -8,7 +8,7 @@ FontPrep takes your TTF and OTF font files and generates all of the respective f
 
 How it works
 ----------
-FontPrep uses a slightly modified version of cocoa-rack (https://github.com/briangonzalez/cocoa-rack). In essence, when you start FontPrep, you're starting a little Sinata app on port 7500 then instantiating a webview point at that server. 
+FontPrep uses a slightly modified version of cocoa-rack (https://github.com/briangonzalez/cocoa-rack). In essence, when you start FontPrep, you're starting a little Sinatra app on port 7500 then instantiating a webview point at that server. 
 
 Commands are sent from the webview back down to the Sinatra server as you interact with FontPrep, and commands are piped to stdout (be it FontForge, ttf2eot, etc.) to complete the given taks. We use a little Applescript magic when necessary.
 
