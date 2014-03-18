@@ -19,36 +19,6 @@ class FontPrep
     true
   end
 
-  def self.themes
-    themes = []
-    Dir.glob('./application/assets/stylesheets/partials/themes/*.scss').each do |theme_file|
-      name = File.basename(theme_file, ".scss")
-      name.gsub!('_theme_', '')
-      themes << name
-    end
-    themes
-  end
-
-  def self.set_theme(theme)
-    begin
-      FileUtils.rm_rf self.default_theme_path
-      File.symlink self.theme_path(theme), self.default_theme_path 
-      FP::Database.set_setting( :theme, theme)
-    rescue Exception => e
-      FileUtils.rm_rf self.default_theme_path
-      File.symlink self.theme_path('ember'), self.default_theme_path 
-      FP::Database.set_setting( :theme, 'ember')   
-    end
-  end
-
-  def self.default_theme_path
-    File.join('application', 'assets', 'stylesheets', 'partials', '_variables_theme.scss')
-  end
-
-  def self.theme_path(name)
-    "themes/_theme_#{name}.scss"
-  end
-
   def self.port
     FONTPREP_PORT || 7500
   end

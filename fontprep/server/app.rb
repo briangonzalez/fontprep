@@ -5,8 +5,8 @@ FONTPREP_PORT             = ENV['PORT'] || 7500
 # Load in gems
 ####################################################
 
-Dir.glob(File.join(File.dirname(__FILE__), "vendor", "gems", "*","lib")).each do |lib| 
-  $LOAD_PATH.unshift File.expand_path(lib) 
+Dir.glob(File.join(File.dirname(__FILE__), "vendor", "gems", "*","lib")).each do |lib|
+  $LOAD_PATH.unshift File.expand_path(lib)
 end
 
 ####################################################
@@ -23,7 +23,7 @@ require 'sprockets'
 require 'sprockets-sass'
 require 'sprockets-helpers'
 require 'uglifier'
-require 'multi_json'
+require 'json'
 
 Dir.glob('./application/**/*.rb') do |file|
   require file
@@ -36,7 +36,6 @@ WEBRICK_HANDLER         = Rack::Handler::WEBrick
 ####################################################
 
 FontPrep.initialize_app!
-FontPrep.themes
 
 ####################################################
 # Main FontPrep Sinatra Class.
@@ -62,7 +61,7 @@ class FPApp < Sinatra::Base
   set :javascripts,     './application/assets/javascripts'
   set :fonts,           './application/assets/fonts'
   set :logging,         true
-  set :static,          true             
+  set :static,          true
   set :haml,            :format => :html5
   set :port,            ENV['PORT'] || 7500
 
@@ -70,7 +69,7 @@ class FPApp < Sinatra::Base
   set :app_values, app
 
   before do
-    cache_control 'no-cache' 
+    cache_control 'no-cache'
   end
 
   get '/' do
@@ -103,17 +102,17 @@ end.to_app
 
 # Trap signals to invoke the shutdown procedure cleanly
 ['INT', 'TERM'].each { |signal|
-   trap(signal){ 
-    WEBRICK_HANDLER.shutdown 
+   trap(signal){
+    WEBRICK_HANDLER.shutdown
     exit!
-  } 
+  }
 }
 
 ########################################################
 # Use FontPrep Runner to conditionally run FontPrep.
 ########################################################
 
-FontPrepRunner.run do 
+FontPrepRunner.run do
   puts " [FONTPREP] Fontprep is now running on port #{FONTPREP_PORT}."
   WEBRICK_HANDLER.run app, :Port => FONTPREP_PORT, :Host => "0.0.0.0"
   exit!

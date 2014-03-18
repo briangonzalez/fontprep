@@ -8,7 +8,7 @@ SYSTEM_FONT_PATH            = File.join( "/", "Library", "Fonts")
 GENERATED_PATH              = File.join(APPLICATION_SUPPORT_PATH, 'generated')
 DATABASE_PATH               = File.join(APPLICATION_SUPPORT_PATH, 'db', 'db.yaml')
 DATABASE_DIR                = File.join(APPLICATION_SUPPORT_PATH, 'db')
-  
+
 FUSION_PATH                 = File.join('external', 'bin', 'fontforge')
 TITO_PATH                   = File.join('external', 'bin', 'ttf2eot')
 PYTHON_PATH                 = File.join('/', 'usr', 'bin', 'python')
@@ -18,7 +18,7 @@ NORMALIZE_NAMES_SCRIPT_PATH = File.join('external', 'scripts', 'normalize-names'
 CONVERT_SCRIPT_PATH         = File.join('external', 'scripts', 'convert')
 CHARS_SCRIPT_PATH           = File.join('external', 'scripts', 'chars')
 FAMILY_SCRIPT_PATH          = File.join('external', 'scripts', 'family')
-WEBFONT_SCRIPT_PATH         = File.join('external', 'scripts', 'webfont')
+WEBFONT_SCRIPT_PATH         = File.join('external', 'scripts', 'webfont.pe')
 NAME_SCRIPT_PATH            = File.join('external', 'scripts', 'name')
 SVGS_SCRIPT_PATH            = File.join('external', 'scripts', 'svgs')
 SUBSET_SCRIPT_PATH          = File.join('external', 'scripts', 'subset')

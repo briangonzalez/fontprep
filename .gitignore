@@ -1,7 +1,8 @@
 
 fontprep/server/public/
-FontPrep.xcodeproj/project.xcworkspace/xcuserdata/
-FontPrep.xcodeproj/xcuserdata/
+FontPrep.xcodeproj/project.xcworkspace/xcuserdata
+FontPrep.xcodeproj/project.xcworkspace/xcshareddata
+FontPrep.xcodeproj/xcuserdata
 
 .sass-cache
 .DS_Store

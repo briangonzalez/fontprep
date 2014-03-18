@@ -56,7 +56,7 @@ class InstalledFont
 
     id = metadata[:id]
     set_data(:id, Sinatra::AppHelpers.random) if not id
-    @id = id 
+    @id = id
   end
 
   def path
@@ -99,7 +99,7 @@ class InstalledFont
   end
 
   def name_normalized_path
-    File.join(base, "#{name}-name-normlized.ttf")
+    File.join(base, "#{name}-name-normalized.ttf")
   end
 
   def woff_path
@@ -149,14 +149,14 @@ class InstalledFont
   def web_friendly?
     File.exists?(web_friendly_path)
   end
-  
+
   def woff?
     File.exists?(woff_path)
   end
 
   def eot?
     File.exists?(eot_path)
-  end 
+  end
 
   def svg?
     File.exists?(svg_path)
@@ -174,10 +174,10 @@ class InstalledFont
     return metadata[:avg_size] if metadata && metadata[:avg_size]
     sizes = [0]
     sizes <<  File.size(ttf_path)   if ttf?
-    sizes <<  File.size(otf_path)   if otf? 
+    sizes <<  File.size(otf_path)   if otf?
     sizes <<  File.size(woff_path)  if woff?
-    sizes <<  File.size(eot_path)   if eot? 
-    sizes <<  File.size(svg_path)   if svg? 
+    sizes <<  File.size(eot_path)   if eot?
+    sizes <<  File.size(svg_path)   if svg?
     avg_b = sizes.inject{ |sum, el| sum + el }.to_f / sizes.size
     avg_size = avg_b/1024
     set_data(:avg_size, avg_size)
@@ -202,10 +202,10 @@ class InstalledFont
   def process!(except=[])
     puts " ** Processing #{name}"
     make_metadata       unless metadata?
-    make_ttf_clean      
+    make_ttf_clean
     make_ttf            unless ttf?
     make_otf            unless otf?
-    make_web_friendly!  
+    make_web_friendly!
     make_woff           unless woff?
     make_eot            unless eot?
     make_svg            unless svg?
@@ -264,13 +264,13 @@ class InstalledFont
     script  = File.read(SUBSET_SCRIPT_PATH)
 
     # Assign unicode values to all glyphs.
-    u       = selections.map{ |c| 
+    u       = selections.map{ |c|
                 uni = "0x" + c.to_i.to_s(16)
                 [   "SelectIf(", uni, ");", "SetUnicodeValue(", uni, ");"].join('')
               }.join("\n");
 
-    # Add gylphs to selection. 
-    s       = selections.map{ |c| 
+    # Add gylphs to selection.
+    s       = selections.map{ |c|
                 uni = "0x" + c.to_i.to_s(16)
                 [   "SelectMoreIf(", uni, ");" ].join('')
               }.join("\n");
@@ -318,7 +318,7 @@ class InstalledFont
 
   def make_css
     css       = File.read(FONT_EXPORT_TEMPLATE_PATH)
-    
+
     css_family = FP::Database.data[:settings][:use_font_family] ? family : fontname
     css.gsub!('[family]', css_family)
 
@@ -347,10 +347,10 @@ class InstalledFont
   end
 
   def base_metadata
-    { 
-      :timestamp  => Time.now().strftime('%A, %B %l, %Y'), 
-      :name       => name, 
-      :id         => id 
+    {
+      :timestamp  => Time.now().strftime('%A, %B %l, %Y'),
+      :name       => name,
+      :id         => id
     }
   end
 
@@ -367,7 +367,7 @@ class InstalledFont
   def destroy!
     FileUtils.rm_rf( File.join(TRASH_PATH,rawname) ) if File.exists?(File.join(TRASH_PATH,rawname))
     FileUtils.mv(path, TRASH_PATH, :force => true)
-  end  
+  end
 
   def install!
     path = ttf_clean? ? ttf_path_clean : ttf_path
@@ -376,16 +376,16 @@ class InstalledFont
 
   def self.all
     fonts = {}
-    Dir.entries( GENERATED_PATH ).select do |dir| 
-      next if ['.', '..'].include?(dir) 
-      next if !File.directory?(File.join(GENERATED_PATH, dir)) 
+    Dir.entries( GENERATED_PATH ).select do |dir|
+      next if ['.', '..'].include?(dir)
+      next if !File.directory?(File.join(GENERATED_PATH, dir))
       font = InstalledFont.new(dir)
 
       next if !font.metadata?
 
       fonts[font.id] = font
     end
-    fonts 
+    fonts
   end
 
   def self.all_as_array
@@ -393,7 +393,7 @@ class InstalledFont
     a = a.sort{ |a,b|
      b_name = b.display_name.downcase
      a_name = a.display_name.downcase
-     a_name <=> b_name 
+     a_name <=> b_name
     }
     a
   end
@@ -422,10 +422,10 @@ class InstalledFont
   def with_path(dir, keep_ttf=true, keep_ttf_clean=false, &block)
     make_ttf_clean unless ttf_clean?
     old_base  = base
-    ttf       = ttf_path 
-    ttf_c     = ttf_path_clean 
+    ttf       = ttf_path
+    ttf_c     = ttf_path_clean
 
-    @base     = dir 
+    @base     = dir
     FileUtils.cp ttf, base
     FileUtils.cp ttf_c, base
 
@@ -470,9 +470,9 @@ class InstalledFont
 
     @style = 'normal'
     if    normalized_name =~ /italic/  or normalized_fontname =~ /italic/
-      @style = "italic" 
+      @style = "italic"
     elsif normalized_name =~ /oblique/  or normalized_fontname =~ /oblique/
-      @style = "oblique" 
+      @style = "oblique"
     end
 
     set_data(:style, @style)
