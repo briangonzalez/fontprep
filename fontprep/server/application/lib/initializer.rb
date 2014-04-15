@@ -62,6 +62,7 @@ FP_BLACKLIST = [
   'PGR',
   'PTF',
   'PRTF',
+  'PROD',
   'SCTO',
   'SUDT',
   'TERM',
