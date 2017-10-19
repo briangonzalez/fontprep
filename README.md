@@ -1,3 +1,8 @@
+
+### 🚨 FontPrep is no longer maintained and has been superceded by [fontplop](https://github.com/matthewgonzalez/fontplop) 🚨
+
+-------
+
 <img src='https://rawgithub.com/briangonzalez/fontprep/master/fontprep/server/application/assets/images/logo.svg' height='30'> FontPrep
 ========
 The missing font generator for Mac OSX. _[Download here](https://github.com/briangonzalez/fontprep/releases)._
